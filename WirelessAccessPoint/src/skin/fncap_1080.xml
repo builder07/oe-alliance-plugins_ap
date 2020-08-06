@@ -1,0 +1,30 @@
+<screen name="APWiFimain" position="0,0" size="1920,1080" title="WiFi AP Settings" flags="wfNoBorder" backgroundColor="FNCScreenBackground">
+<widget source="Title" render="Label" position="210,140" size="1500,68" zPosition="-1" halign="center" font="Regular; 36" backgroundColor="FNCmainColor" transparent="1" valign="center" />
+<ePixmap name="bPPodloga" position="210,140" size="1500,820" pixmap="Estuary/background/back_mon_empty.png" zPosition="-10" />
+<eLabel name="" position="235,227" size="1283,128" zPosition="-5" />
+<ePixmap pixmap="Estuary/menu/icons/fw.png" position="1567,284" size="90,70" zPosition="1" />
+
+<eLabel name="" position="1542,372" size="145,50" font="Regular; 28" valign="center" halign="center" text="OK" />
+<eLabel name="" position="1542,435" size="145,50" font="Regular; 28" valign="center" halign="center" text="Exit" />
+
+<widget name="clients"  render="Label" position="1542,790" size="145,48" font="Regular; 28" valign="center" halign="center"  foregroundColor="FNCmainColor"  text="Clients" />
+<widget name="nclients"  render="Label" position="1542,830" size="145,48" font="Regular; 28" valign="center" halign="center"  foregroundColor="FNCmainColor"  text="-" />
+
+
+<widget name="config" position="250,378" size="1260,474" scrollbarMode="showOnDemand" itemHeight="48" font="Regular; 28" backgroundColor="FNCMainListColor" transparent="1" scrollbarSliderForegroundColor="FNCMainFontColor" scrollbarSliderBorderColor="FNCMainListColor" scrollbarSliderPicture="Estuary/list/bar_01.png" />
+
+
+<ePixmap pixmap="Estuary/buttons/buttons.png" position="214,893" size="756,56" alphatest="blend" zPosition="100" />
+
+<widget name="key_red" render="Label" position="235,893" size="354,56" zPosition="1" font="Regular; 30" halign="center" valign="center" backgroundColor="FNCMainListColor" transparent="0" foregroundColor="FNCMainFontColor" />
+<widget name="key_green" render="Label" position="602,893" size="354,56" zPosition="1" font="Regular; 30" halign="center" valign="center" backgroundColor="FNCMainListColor" transparent="0" foregroundColor="FNCMainFontColor" />
+
+<widget name="myText" position="250,240" size="1260,100" font="Regular; 30" halign="center" transparent="1" valign="center" backgroundColor="FNCMainPodlogaColor" foregroundColor="FNCmainColor" />
+<eLabel name="" position="235,365" size="1283,510" zPosition="-4" />
+</screen>   
+
+
+
+
+
+
