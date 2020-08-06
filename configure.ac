@@ -473,6 +473,7 @@ WebBrowser/po/Makefile
 
 WirelessAccessPoint/Makefile
 WirelessAccessPoint/src/Makefile
+WirelessAccessPoint/src/skin/Makefile
 WirelessAccessPoint/meta/Makefile
 WirelessAccessPoint/po/Makefile
 
