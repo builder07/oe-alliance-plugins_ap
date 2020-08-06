@@ -1,10 +1,6 @@
 ACLOCAL_AMFLAGS = -I m4
 
-SUBDIRS = Blindscan DLNABrowser DLNAServer StreamTV 3GModemManager TunerServer OnDemand Fempa LCD4linux RemoteChannelStreamConverter BTDevicesManager SatipClient TerrestrialScan ChannelsImporter ABMCustomMixImporter xmlUpdate MisPlsLcnScan
-
-if MIPSEL
-SUBDIRS += WirelessAccessPoint
-endif
+SUBDIRS = Blindscan DLNABrowser DLNAServer StreamTV 3GModemManager TunerServer OnDemand Fempa LCD4linux RemoteChannelStreamConverter BTDevicesManager SatipClient TerrestrialScan ChannelsImporter ABMCustomMixImporter xmlUpdate MisPlsLcnScan 
 
 if DAGS3
 SUBDIRS += TransCodingSetup
@@ -203,7 +199,7 @@ SUBDIRS += F3LEDControl
 endif
 
 if SF8008
-SUBDIRS += MultiTransCodingSetup VPLEDControl
+SUBDIRS += MultiTransCodingSetup VPLEDControl WirelessAccessPoint
 endif
 
 if SF8008M
@@ -211,7 +207,7 @@ SUBDIRS += MultiTransCodingSetup VPLEDControl
 endif
 
 if VIPER4K
-SUBDIRS += MultiTransCodingSetup VPLEDControl
+SUBDIRS += MultiTransCodingSetup VPLEDControl WirelessAccessPoint
 endif
 
 if GBMV200
@@ -219,7 +215,7 @@ SUBDIRS += MultiTransCodingSetup
 endif
 
 if USTYM4KPRO
-SUBDIRS += MultiTransCodingSetup
+SUBDIRS += MultiTransCodingSetup WirelessAccessPoint
 endif
 
 if BEYONWIZV2
