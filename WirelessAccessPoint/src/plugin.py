@@ -56,7 +56,7 @@ APINFO_ERR = ''
 pAP = ConfigSubsection()
 pAP.showplugin = ConfigYesNo(default=False)
 pAP.useap = ConfigYesNo(default=False)
-pAP.setupmode = ConfigSelection(default='preset', choices=[('preset', 'Preset:      SSID = PurE2wifi      PWD = PurE2box'), ('simple', 'Simple'), ('advanced', 'Advanced')])
+pAP.setupmode = ConfigSelection(default='preset', choices=[('preset', 'Preset:      SSID = OpenFIX      PWD = 12345678'), ('simple', 'Simple'), ('advanced', 'Advanced')])
 pAP.bridge = fixedValue(value='br0')
 pAP.driver = fixedValue(value='nl80211')
 pAP.wirelessmode = ConfigSelection(default=' --ieee80211ac', choices=[(' --ieee80211ac', _('802.11ac mode (fastest)')), (' --ieee80211n', _('802.11n mode (fast)')), (' ', _('b+g mode (compatible with old stuff)'))])
@@ -89,7 +89,7 @@ pAP.channel5 = ConfigSelection(default='36', choices=[('36', '36'),
  ('64', '64'),
  ('100', '100'),
  ('110', '110')])
-pAP.ssid = ConfigText(default='PurE2wifi', visible_width=50, fixed_size=False)
+pAP.ssid = ConfigText(default='OpenFIX', visible_width=50, fixed_size=False)
 pAP.country = ConfigSelection(default=' --country BL', choices=[(' --country BL', _('EUrope')),
  (' --country KR', _('Asia')),
  (' --country NZ', _('South Cross')),
@@ -112,7 +112,7 @@ pAP.wpa = ConfigSelection(default='3', choices=[('0', _('not set')),
  ('1', _('WPA')),
  ('2', _('WPA2')),
  ('3', _('WPA/WPA2'))])
-pAP.wpa_passphrase = ConfigText(default='PurE2box', visible_width=50, fixed_size=False)
+pAP.wpa_passphrase = ConfigText(default='12345678', visible_width=50, fixed_size=False)
 pAP.wpagrouprekey = ConfigInteger(default=600, limits=(0, 3600))
 pAP.wpa_key_mgmt = fixedValue(value='WPA-PSK')
 pAP.wpa_pairwise = fixedValue(value='TKIP CCMP')
@@ -542,13 +542,13 @@ class APWiFimain(Screen, ConfigListScreen):
             self.session.open(MessageBox, _('   AP is already active   '), MessageBox.TYPE_INFO, 5)
             return
         if pAP.setupmode.value == 'preset' and self.canAC(pAP.wirelessdevice.value):
-            self.args = ' --daemon  --country AT --freq-band 5 --ieee80211ac --ht_capab [HT40+]  -m bridge wlan0 eth0 PurE2WiFi PurE2box '
+            self.args = ' --daemon  --country AT --freq-band 5 --ieee80211ac --ht_capab [HT40+]  -m bridge wlan0 eth0 OpenFIX 12345678 '
         elif pAP.setupmode.value == 'preset' and self.can5ghz(pAP.wirelessdevice.value):
-            self.args = ' --daemon --freq-band 5  --country AT --ieee80211n  -m bridge wlan0 eth0 PurE2WiFi PurE2box '
+            self.args = ' --daemon --freq-band 5  --country AT --ieee80211n  -m bridge wlan0 eth0 OpenFIX 12345678 '
         elif pAP.setupmode.value == 'preset' and self.canN(pAP.wirelessdevice.value):
-            self.args = ' --daemon --freq-band 2.4  --country AT  --ht_capab [SHORT-GI-20][SHORT-GI-40][HT40]  --ieee80211n -m bridge wlan0 eth0 PurE2WiFi PurE2box '
+            self.args = ' --daemon --freq-band 2.4  --country AT  --ht_capab [SHORT-GI-20][SHORT-GI-40][HT40]  --ieee80211n -m bridge wlan0 eth0 OpenFIX 12345678 '
         elif pAP.setupmode.value == 'preset':
-            self.args = ' --daemon --freq-band 2.4 --country AT   -m bridge wlan0 eth0 PurE2WiFi PurE2box '
+            self.args = ' --daemon --freq-band 2.4 --country AT   -m bridge wlan0 eth0 OpenFIX 12345678 '
         elif pAP.setupmode.value == 'simple' or pAP.setupmode.value == 'advanced':
             if pAP.band.value == ' --freq-band 5':
                 chan = pAP.channel5.value
