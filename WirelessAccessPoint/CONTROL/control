@@ -4,7 +4,7 @@ Description: enigma2-plugin-systemplugins-wirelessaccesspoint
 WiFi AP Access Point - OpenFIX
 Section: base
 Priority: optional
-Maintainer: BlackFish
+Maintainer: 
 License: Proprietary
 Architecture: cortexa15hf-neon-vfpv4
 Depends: createap, openfix-enigma2
