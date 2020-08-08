@@ -6,3 +6,5 @@ install_PYTHON =  \
 	__init__.py \
 	plugin.py \
 	hostapd.conf.orig
+
+install_DATA = *.png
