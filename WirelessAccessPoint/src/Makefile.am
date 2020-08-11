@@ -7,4 +7,4 @@ install_PYTHON =  \
 	plugin.py \
 	hostapd.conf.orig
 
-install_DATA = *.png
+install_DATA = WirelessAccessPoint.png
