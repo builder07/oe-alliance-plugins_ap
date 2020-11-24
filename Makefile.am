@@ -199,7 +199,7 @@ SUBDIRS += F3LEDControl
 endif
 
 if SF8008
-SUBDIRS += MultiTransCodingSetup VPLEDControl WirelessAccessPoint
+SUBDIRS += MultiTransCodingSetup VPLEDControl WirelessAccessPoint HbbTV
 endif
 
 if SF8008M
@@ -207,7 +207,7 @@ SUBDIRS += MultiTransCodingSetup VPLEDControl
 endif
 
 if VIPER4K
-SUBDIRS += MultiTransCodingSetup VPLEDControl WirelessAccessPoint
+SUBDIRS += MultiTransCodingSetup VPLEDControl WirelessAccessPoint HbbTV
 endif
 
 if GBMV200
